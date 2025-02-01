@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Shopping Cart | GT Movies Store</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
 <body>
     <div>
@@ -20,14 +21,14 @@
                 </tr>
             </thead>
             <tbody>
-            {#for loop for movies in cart#}
+            {%for movie in template_data.movies_in_cart%}
                 <tr>
                     <td>{{movie.id}}</td>
-                    <td>{{movie.name}}</td>
-                    <td>{{movie.price}}</td>
+                    <td>{{movie.title}}</td>
+                    <td>${{movie.price}}</td>
                     <td>Quantity</td>
                 </tr>
-            {# endfor #}
+            {% endfor %}
             </tbody>
         </table>
     </div>
