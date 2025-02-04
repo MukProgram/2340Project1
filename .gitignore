@@ -1,0 +1,8 @@
+# Ignore all .iml files
+*.iml
+
+# Ignore misc.xml
+.idea/misc.xml
+
+# Ignore the entire .idea folder
+.idea/
