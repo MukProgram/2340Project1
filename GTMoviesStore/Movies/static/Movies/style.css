@@ -1,9 +1,18 @@
-* {
-
-
+:root {
+    --body-bg: white;
+    --accent: #e41811;
+    --visited_link: #ffe34d;
+    --text_color: black;
 }
-@media (prefers-reduced-motion: no-preference) {
-    * {
-      scroll-behavior: smooth;
-    }
+
+.navbar {
+    background-color: var(--text_color);
 }
+.nav-link, .navbar-brand {
+    color: var(--body-bg);
+}
+/*
+.nav-item[aria-current="true"] {
+    color: var(--visited_link);
+    font-style: inherit;
+}*/
