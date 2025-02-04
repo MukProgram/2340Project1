@@ -1,0 +1,25 @@
+{% extends 'Movies/base.html' %}
+{% block content %}
+    <div class="p-4">
+        <div class="container">
+            <div class="row mt-5">
+                <div class="col mx-auto mb-3">
+                    <h2>Movies</h2>
+                    <hr />
+                </div>
+            </div>
+            <div class= "row">
+                {% for movie in movies %}
+                    <div class="col-md-4 col-lg-3 mb-2">
+                        <div class="p-2 card align-items-center pt-4">
+                          <img src="../../static/images/about.png" class="card-img-top rounded" alt="photo of real of film, slight unspooled">
+                          <div class="card-body text-center">
+                            {{ movie.title }}
+                          </div>
+                        </div>
+                  </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

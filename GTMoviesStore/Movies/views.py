@@ -8,3 +8,8 @@ def index(request):
 def cart(request):
     movies = Movie.objects.all()
     return render(request, "Movies/cart.html", {"movies": movies})
+def about(request):
+    return render(request, "Movies/about.html")
+def movies(request):
+    movies = Movie.objects.all()
+    return render(request, "Movies/movies.html", {"movies": movies})
