@@ -11,7 +11,15 @@
 .nav-link, .navbar-brand {
     color: var(--body-bg);
 }
-
+.bg-index{
+  background: url("../images/banner.jpg") no-repeat
+    fixed;
+  background-size: 100% auto;
+}
+.card-title {
+    font-weight: bold;
+    font-size: medium;
+}
 /*
 .nav-item[aria-current="true"] {
     color: var(--visited_link);

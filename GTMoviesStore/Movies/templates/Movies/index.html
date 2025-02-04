@@ -1,7 +1,7 @@
 {% extends 'Movies/base.html' %}
 {% block content %}
-<header class="masthead bg-index text-center py-5">
-  <div class="container d-flex align-items-center flex-column pt-3">
+<header class="masthead bg-index text-white text-center py-5">
+  <div class="container d-flex align-items-center flex-column pt-5">
     <h2>GT Movies Store</h2>
     <p>Your Ticket to Unlimited Entertainment!</p>
   </div>
@@ -12,7 +12,33 @@
       <div class="col mx-auto text-center mb-3">
         <h4>Welcome to the GT Movies Store!</h4>
       </div>
-      <div class = "container"></div>
+        <div class= "row justify-content-center">
+            <div class="col-md-4 col-lg-3 mb-2 mx-5">
+                <a id="home-card" href="{% url 'movies' %}">
+                    <div class="p-2 card align-items-center pt-4">
+                        <img src="../../static/images/film.svg" class="card-img-top rounded" alt="film icon">
+                        <div class="card-title text-center mt-3">Movie Library</div>
+                        <div class="card-text text-center">View our extensive libraries of classic, new, underground, and international films</div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 col-lg-3 mb-2 mx-5">
+                <a id="home-card" href="{% url 'about' %}">
+                    <div class="p-2 card align-items-center pt-4">
+                        <img src="../../static/images/info-circle.svg" class="card-img-top rounded" alt="info icon">
+                        <div class="card-title text-center mt-3 ">About</div>
+                        <div class="card-text text-center">More about the website and our team</div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 col-lg-3 mb-2 mx-5">
+                    <div class="p-2 card align-items-center pt-4">
+                        <img src="../../static/images/film.svg" class="card-img-top rounded" alt="film icon">
+                        <div class="card-title text-center mt-3">Movie Library</div>
+                        <div class="card-text text-center">View our extensive libraries of classic, new, undeground, and international films</div>
+                    </div>
+            </div>
+        </div>
     </div>
   </div>
 </div>
