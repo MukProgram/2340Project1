@@ -1,0 +1,12 @@
+# Ignore all .iml files
+<<<<<<< HEAD
+*.iml
+=======
+.iml
+>>>>>>> Anvith_V1_Branch
+
+# Ignore misc.xml
+.idea/misc.xml
+
+# Ignore the entire .idea folder
+.idea/
