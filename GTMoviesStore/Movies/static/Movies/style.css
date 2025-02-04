@@ -11,10 +11,7 @@
 .nav-link, .navbar-brand {
     color: var(--body-bg);
 }
-.masthead {
-    background: url("../images/banner.jpg") no-repeat fixed;
-    background-size: 100% auto;
-}
+
 /*
 .nav-item[aria-current="true"] {
     color: var(--visited_link);
