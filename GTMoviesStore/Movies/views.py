@@ -4,6 +4,7 @@ from .models import *
 def index(request):
     movies = Movie.objects.all()
     return render(request, "Movies/index.html", {"movies": movies})
+
 def cart(request):
     movies = Movie.objects.all()
     return render(request, "Movies/cart.html", {"movies": movies})
