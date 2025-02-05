@@ -12,30 +12,36 @@
       <div class="col mx-auto text-center mb-3">
         <h4>Welcome to the GT Movies Store!</h4>
       </div>
-        <div class= "row justify-content-center">
+        <div class= "d-flex row justify-content-evenly">
             <div class="col-md-4 col-lg-3 mb-2 mx-5">
-                <a id="home-card" href="{% url 'movies' %}">
                     <div class="p-2 card align-items-center pt-4">
                         <img src="../../static/images/film.svg" class="card-img-top rounded" alt="film icon">
-                        <div class="card-title text-center mt-3">Movie Library</div>
+                        <div class="card-title text-center mt-3">
+                            <h4>Movie Library</h4>
+                        </div>
                         <div class="card-text text-center">View our extensive libraries of classic, new, underground, and international films</div>
                     </div>
-                </a>
             </div>
             <div class="col-md-4 col-lg-3 mb-2 mx-5">
-                <a id="home-card" href="{% url 'about' %}">
+                    <div class="p-2 card align-items-center pt-4">
+                        <img src="../../static/images/camera-reels.svg" class="card-img-top rounded" alt="camera reel icon">
+                        <div class="card-body">
+                            <figure class="text-center">
+                                <blockquote class="blockquote">
+                                    <p>We are the movies and the movies are us.</p>
+                                </blockquote>
+                                <figcaption class="blockquote-footer">
+                                    <cite title="Source Title">David Ansen</cite>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+            </div>
+            <div class="col-md-4 col-lg-3 mb-2 mx-5">
                     <div class="p-2 card align-items-center pt-4">
                         <img src="../../static/images/info-circle.svg" class="card-img-top rounded" alt="info icon">
-                        <div class="card-title text-center mt-3 ">About</div>
-                        <div class="card-text text-center">More about the website and our team</div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-4 col-lg-3 mb-2 mx-5">
-                    <div class="p-2 card align-items-center pt-4">
-                        <img src="../../static/images/film.svg" class="card-img-top rounded" alt="film icon">
-                        <div class="card-title text-center mt-3">Movie Library</div>
-                        <div class="card-text text-center">View our extensive libraries of classic, new, undeground, and international films</div>
+                        <div class="card-title text-center mt-3 "><h4>About</h4></div>
+                        <div class="card-text text-center">Learn more about the website, the store, and our development team</div>
                     </div>
             </div>
         </div>

@@ -16,12 +16,3 @@
     fixed;
   background-size: 100% auto;
 }
-.card-title {
-    font-weight: bold;
-    font-size: medium;
-}
-/*
-.nav-item[aria-current="true"] {
-    color: var(--visited_link);
-    font-style: inherit;
-}*/
