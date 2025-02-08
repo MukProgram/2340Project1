@@ -3,10 +3,8 @@ from django.contrib.auth.decorators import login_required
 from .models import *
 
 def index(request):
-    template_data = {}
-    template_data['title'] = 'GT Movies Store'
-    movies = Movie.objects.all()
-    return render(request, "Movies/index.html", {"movies": movies})
+
+    return render(request, "Movies/index.html", {'movies': movies})
 def about(request):
     template_data = {}
     template_data['title'] = 'About'
@@ -14,7 +12,10 @@ def about(request):
 def movies(request):
     template_data = {}
     template_data['title'] = 'Movie Library'
-    movies = Movie.objects.all()
+    if request.method == 'POST' and request.POST['search'] != '':
+        movies = Movie.objects.filter(title__icontains=request.POST['search'])
+    else:
+        movies = Movie.objects.all()
     return render(request, "Movies/movies.html", {"movies": movies})
 
 @login_required
