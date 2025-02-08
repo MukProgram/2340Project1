@@ -30,8 +30,10 @@ def create_review(request, id):
     else:
         return redirect('movies.show', id=id)
 def show(request, id):
-    movie = movies[id - 1] #EXCEPTION HERE
+    movie = Movie.objects.get(id = id)
     template_data = {}
-    template_data['title'] = movie['name']
+    reviews = Review.objects.filter(movie = movie)
+    template_data['title'] = movie.title
     template_data['movie'] = movie
+    template_data['reviews'] = reviews
     return render(request, 'movies/show.html',{'template_data': template_data})
