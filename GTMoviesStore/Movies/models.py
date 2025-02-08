@@ -1,20 +1,22 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 class Movie(models.Model):
     title = models.CharField(max_length=100)
     price = models.IntegerField()
     image = models.TextField()
-    review = models.TextField()
 
     def __str__(self):
         return self.title
 
-def get_default_movie():
-    return Movie.objects.get_or_create(title = 'LOTR', price = 0)[0].id
 
-class CartItem(models.Model):
-    movie = models.ForeignKey(Movie, on_delete = models.CASCADE, default = get_default_movie)
-    quantity = models.IntegerField()
-
+class Review(models.Model):
+    id = models.AutoField(primary_key=True)
+    comment = models.CharField(max_length=255)
+    date = models.DateTimeField(auto_now_add=True)
+    movie = models.ForeignKey(Movie,
+        on_delete=models.CASCADE)
+    user = models.ForeignKey(User,
+        on_delete=models.CASCADE)
     def __str__(self):
-        return str(self.quantity) + str(self.movie)
+        return str(self.id) + ' - ' + self.movie.name
