@@ -14,7 +14,9 @@
                         <div class="p-2 card align-items-center pt-4">
                           <img src="../../static/images/about.png" class="card-img-top rounded" alt="photo of real of film, slight unspooled">
                           <div class="card-body text-center">
-                            {{ movie.title }}
+                              <a href="{% url 'movies.show' id=movie.id %}"  class="btn bg-danger text-white">
+                                {{ movie.title }}
+                              </a>
                           </div>
                         </div>
                   </div>
