@@ -3,7 +3,7 @@ from django.contrib.auth import login as auth_login, authenticate, logout as aut
 from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import redirect
 from django.contrib.auth.decorators import login_required
-@login_required
+
 def signup(request):
     template_data = {}
     template_data['title'] = 'Sign Up'
@@ -36,7 +36,8 @@ def login(request, user=None):
                       {'template_data': template_data})
     else:
         auth_login(request, user)
-        return redirect('home.index')
+        return redirect('index')
+@login_required
 def logout(request):
     auth_logout(request)
-    return redirect('home.index')
+    return redirect('index')
