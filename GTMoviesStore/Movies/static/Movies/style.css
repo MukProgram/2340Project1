@@ -8,6 +8,9 @@
 .navbar {
     background-color: var(--text_color);
 }
+.nav-link:hover, .navbar-brand:hover{
+    color: var(--visited_link);
+}
 .nav-link, .navbar-brand {
     color: var(--body-bg);
 }
@@ -15,4 +18,38 @@
   background: url("../images/banner.jpg") no-repeat
     fixed;
   background-size: 100% auto;
+}
+#movie-poster {
+    height: 300px;
+    width: auto;
+}
+#show-movie-poster{
+    height: 700px;
+    width:auto;
+}
+.ms-footer {
+  background-color: var(--text_color);
+}
+.ms-footer p {
+  color: #7F7F7F;
+  font-size: 13px;
+}
+.ms-footer a:hover {
+  color: var(--visited_link);
+  text-decoration: none;
+}
+.ms-footer a {
+  color: var(--accent);
+  text-decoration: none;
+}
+.ms-footer-bottom span{
+  font-size: 13px;
+  line-height: 38px;
+}
+.ms-footer-bottom a {
+  color: var(--accent);
+  text-decoration: none;
+}
+.ms-footer-bottom a:hover {
+  color: #fff;
 }

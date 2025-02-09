@@ -34,6 +34,7 @@ def show(request, id):
     template_data = {}
     reviews = Review.objects.filter(movie = movie)
     template_data['title'] = movie.title
+    template_data['image'] = movie.image
     template_data['movie'] = movie
     template_data['reviews'] = reviews
     return render(request, 'movies/show.html',{'template_data': template_data})
