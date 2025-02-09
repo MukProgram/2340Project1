@@ -7,14 +7,18 @@ def index(request):
     template_data = {}
     template_data['title'] = 'GT Movies Store'
     return render(request, "Movies/index.html", {"movies": movies})
+
 def about(request):
     template_data = {}
     template_data['title'] = 'About'
     return render(request, "Movies/about.html")
 def movies(request):
-    movies = Movie.objects.all()
     template_data = {}
-    template_data['title'] = 'Movies'
+    template_data['title'] = 'Movie Library'
+    if request.method == 'POST' and request.POST['search'] != '':
+        movies = Movie.objects.filter(title__icontains=request.POST['search'])
+    else:
+        movies = Movie.objects.all()
     return render(request, "Movies/movies.html", {"movies": movies})
 
 @login_required
