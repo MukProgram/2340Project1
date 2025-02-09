@@ -8,29 +8,33 @@
 </header>
 <div class="p-3">
   <div class="container">
-    <div class="row mt-4">
-      <div class="col mx-auto text-center mb-3">
-        <h3>Welcome to the GT Movies Store!</h3>
+    <div class="row mt-3">
+      <div class="col mx-auto text-center mb-5">
+        <h3 style="font-weight:bold;">Welcome to the GT Movies Store!</h3>
       </div>
     </div>
     <div class= "row">
-        <div class="col px-2 mx-auto text-center my-auto">
+        <div class="col-3 px-2 mx-auto text-center my-auto">
             <img src="../../static/images/film.svg" alt="film reel" class="mb-3" width="100px" height="100px"/>
             <h4><a href="{% url 'movies' %}" style="text-decoration:none;color:var(--accent);">Movie Library</a></h4>
             <p>View our extensive libraries of classic, new, underground, and international films</p>
         </div>
-        <div class="col-5 px-2 mx-auto text-center my-auto">
+        <div class="col">
+        </div>
+        <div class="col-3 px-2 mx-auto text-center my-auto">
             <img src="../../static/images/camera-reels.svg" class="mb-3" alt="info icon" width="100px" height="100px"/>
             <figure class="text-center">
                 <blockquote class="blockquote">
-                    <h4>We are the movies and the movies are us.</h4>
+                    <h4>"We are the movies and the movies are us."</h4>
                 </blockquote>
-                <figcaption class="mt-2 blockquote-footer">
+                <figcaption class="pt-2 blockquote-footer">
                     <cite title="Source Title">David Ansen</cite>
                 </figcaption>
             </figure>
         </div>
-        <div class="col px-2 mx-auto text-center my-auto">
+        <div class="col">
+        </div>
+        <div class="col-3 px-2 mx-auto text-center my-auto">
             <img src="../../static/images/info-circle.svg" class="mb-3" alt="info icon" width="100px" height="100px"/>
             <h4><a href="{% url 'about' %}" style="text-decoration:none;color:var(--accent);">About</a></h4>
             <p>Learn more about the site and the store.</p>

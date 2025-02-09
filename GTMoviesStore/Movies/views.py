@@ -3,18 +3,18 @@ from django.contrib.auth.decorators import login_required
 from .models import *
 
 def index(request):
+    movies = Movie.objects.all()
     template_data = {}
     template_data['title'] = 'GT Movies Store'
-    movies = Movie.objects.all()
     return render(request, "Movies/index.html", {"movies": movies})
 def about(request):
     template_data = {}
     template_data['title'] = 'About'
     return render(request, "Movies/about.html")
 def movies(request):
-    template_data = {}
-    template_data['title'] = 'Movie Library'
     movies = Movie.objects.all()
+    template_data = {}
+    template_data['title'] = 'Movies'
     return render(request, "Movies/movies.html", {"movies": movies})
 
 @login_required
