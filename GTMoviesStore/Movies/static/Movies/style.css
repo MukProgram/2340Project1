@@ -19,6 +19,12 @@
     fixed;
   background-size: 100% auto;
 }
+.custom-toggler.navbar-toggler {
+    border-color: white;
+}
+.custom-toggler .navbar-toggler-icon {
+    background-image: url("../images/list.svg");
+}
 #movie-poster {
     height: 300px;
     width: auto;
