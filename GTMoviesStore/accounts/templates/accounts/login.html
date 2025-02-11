@@ -16,11 +16,11 @@
                         {% csrf_token %}
                         <p>
                             <label for="username">Username</label>
-                            <input id="username" aria-required="true" autocomplete="username" class="form-control">
+                            <input id="username" type="text" name = "username" aria-required="true" required autocomplete="username" class="form-control">
                         </p>
                         <p>
                             <label for="password">Password</label>
-                            <input id="password" type="password" name="password" aria-required="true" autocomplete="current-password" class="form-control">
+                            <input id="password" type="password" name="password" aria-required="true" required autocomplete="current-password" class="form-control">
                         </p>
                         <div class="text-center">
                             <button type="submit" class="btn bg-danger text-white">Log In</button>
