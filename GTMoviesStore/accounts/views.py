@@ -46,5 +46,5 @@ def logout(request):
 def orders(request):
     template_data = {}
     template_data['title'] = 'Orders'
-    template_data['orders'] = request.User.order_set.all()
+    template_data['orders'] = request.user.order_set.all()
     return render(request, 'accounts/orders.html', {'template_data': template_data})
