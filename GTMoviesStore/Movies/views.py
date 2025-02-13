@@ -6,20 +6,20 @@ def index(request):
     movies = Movie.objects.all()
     template_data = {}
     template_data['title'] = 'GT Movies Store'
-    return render(request, "Movies/index.html", {"movies": movies})
+    return render(request, "Movies/index.html",  {'template_data': template_data})
 
 def about(request):
     template_data = {}
     template_data['title'] = 'About'
-    return render(request, "Movies/about.html")
+    return render(request, "Movies/about.html", {'template_data': template_data})
 def movies(request):
     template_data = {}
-    template_data['title'] = 'Movie Library'
+    template_data['title'] = 'Movies'
     if request.method == 'POST' and request.POST['search'] != '':
-        movies = Movie.objects.filter(title__icontains=request.POST['search'])
+        template_data['movies'] = Movie.objects.filter(title__icontains=request.POST['search'])
     else:
-        movies = Movie.objects.all()
-    return render(request, "Movies/movies.html", {"movies": movies})
+        template_data['movies'] = Movie.objects.all()
+    return render(request, "Movies/movies.html", {'template_data': template_data})
 
 @login_required
 def create_review(request, id):
