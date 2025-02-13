@@ -4,7 +4,6 @@ from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
-
 from cart.models import Order
 
 
@@ -26,8 +25,7 @@ def login(request, user=None):
     template_data = {}
     template_data['title'] = 'Login'
     if request.method == 'GET':
-        return render(request, 'accounts/login.html',
-                      {'template_data': template_data})
+        return render(request, 'accounts/login.html',{'template_data': template_data})
     elif request.method == 'POST':
         user = authenticate(
             request,
@@ -36,11 +34,10 @@ def login(request, user=None):
         )
         if user is None:
             template_data['error'] = 'The username or password is incorrect.'
-        return render(request, 'accounts/login.html',
-                      {'template_data': template_data})
-    else:
+            return render(request, 'accounts/login.html', {'template_data': template_data})
         auth_login(request, user)
         return redirect('index')
+
 @login_required
 def logout(request):
     auth_logout(request)

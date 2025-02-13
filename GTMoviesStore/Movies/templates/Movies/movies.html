@@ -8,7 +8,7 @@
                     <hr />
                 </div>
             </div>
-            <div class="row">
+            <div class="row pb-5" style="margin-bottom:127px">
                 <form method="POST" action= "{% url 'movies' %}" class="row row-cols-auto align-items-center">
                     {% csrf_token %}
                     <div class="col-11">
@@ -20,7 +20,7 @@
                       <button type="submit" class="btn bg-dark text-white mb-3">Search</button>
                     </div>
                 </form>
-                {% for movie in movies %}
+                {% for movie in template_data.movies %}
                     <div class="col-md-4 col-lg-3 mb-2 d-flex">
                         <div class="p-2 card align-items-center pt-4">
                           <img src="{{ movie.image }}" class="card-img-top mb-3" id="movie-poster" alt="movie poster for {{ movie.title }}">
