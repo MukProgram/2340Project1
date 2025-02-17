@@ -3,6 +3,9 @@ from django.contrib.auth import login as auth_login, authenticate, logout as aut
 from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import redirect
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.views import PasswordResetView
+from django.contrib.messages.views import SuccessMessageMixin
+from django.urls import reverse_lazy
 from django.contrib.auth.models import User
 from cart.models import Order
 
@@ -30,6 +33,7 @@ def login(request, user=None):
         user = authenticate(
             request,
             username=request.POST['username'],
+            email=request.POST['email'],
             password=request.POST['password']
         )
         if user is None:
@@ -48,3 +52,13 @@ def orders(request):
     template_data['title'] = 'Orders'
     template_data['orders'] = request.user.order_set.all()
     return render(request, 'accounts/orders.html', {'template_data': template_data})
+
+class ResetPasswordView(SuccessMessageMixin, PasswordResetView):
+    template_name = 'accounts/password_reset.html'
+    email_template_name = 'users/password_reset_email.html'
+    subject_template_name = 'users/password_reset_subject'
+    success_message = "We've emailed you instructions for setting your password, " \
+                      "if an account exists with the email you entered. You should receive them shortly." \
+                      " If you don't receive an email, " \
+                      "please make sure you've entered the address you registered with, and check your spam folder."
+    success_url = reverse_lazy('users-home')
