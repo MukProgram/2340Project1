@@ -42,7 +42,7 @@
     <div class="row">
         <div class="text-end">
             {% if template_data.movies_in_cart|length > 0 %}
-                <a href="#">
+                <a href="{% url 'cart.clear' %}">
                     <button class="btn btn-danger mb-2"><b>Remove all movies from Cart</b></button>
                 </a>
             {% endif %}
