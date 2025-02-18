@@ -2,13 +2,14 @@
 {% block content %}
 <div class="p-3 m-3">
     <div class="container">
-        <div class="row mt-5">
+        <div class="row my-5" style="margin-bottom:100px">
             <div class="col mx-auto mb-3">
                 <h2>Purchase Completed</h2>
                 <hr />
-                <p>Congratulations, purchase completed. Order number is: <b>#{{ template_data.order_id }}</b></p>
+                <p> Congratulations, purchase completed. Order number is: <b>#{{ template_data.order_id }}</b></p>
             </div>
         </div>
+        <div class="row my-5 spacer" style="height:310px;margin-bottom: 200px"></div>
     </div>
 </div>
 {% endblock %}

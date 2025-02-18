@@ -36,7 +36,7 @@
     </div>
     <div class="row">
         <div class="text-end">
-            <a class="btn btn-outline-primary mb-2" href="{% url 'movies' %}"><b>Continue Shopping</b></a>
+            <a class="btn btn-outline-primary mb-2" style="margin-top: 60px" href="{% url 'movies' %}"><b>Continue Shopping</b></a>
         </div>
     </div>
     <div class="row">
@@ -48,18 +48,20 @@
             {% endif %}
         </div>
     </div>
-  <div class="row">
+
+    <div class="row" >
+      <div class="text-end">
+          <a class="btn btn-outline-secondary mb-2"><b>Total to pay:</b> ${{ template_data.cart_total }}</a>
+      </div>
+    </div>
+  <div class="row mb-4">
         <div class="text-end">
             {% if template_data.movies_in_cart|length > 0 %}
                 <a href="{% url 'cart.purchase' %}" class="btn bg-dark text-white mb-2">Purchase</a>
             {% endif %}
         </div>
-    </div>
-    <div class="row" style="margin-bottom:70px">
-      <div class="text-end">
-          <a class="btn btn-outline-secondary mb-2"><b>Total to pay:</b> ${{ template_data.cart_total }}</a>
-      </div>
-    </div>
+  </div>
+  <div class="spacer" style="height:300px"></div>
   </div>
 </div>
 {% endblock %}

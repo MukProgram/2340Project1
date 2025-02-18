@@ -11,7 +11,7 @@
             <div class="row pb-5" style="margin-bottom:127px">
                 <form method="POST" action= "{% url 'movies' %}" class="row row-cols-auto align-items-center">
                     {% csrf_token %}
-                    <div class="col-11">
+                    <div class="col-9">
                         <p>
                           <input name="search" required class="form-control" placeholder="Search" id="search">
                         </p>
@@ -21,8 +21,8 @@
                     </div>
                 </form>
                 {% for movie in template_data.movies %}
-                    <div class="col-md-4 col-lg-3 mb-2 d-flex">
-                        <div class="p-2 card align-items-center pt-4">
+                    <div class="col-md-4 col-lg-3 mb-2">
+                        <div class="pt-4 pb-2 px-2 card w-75 align-items-center">
                           <img src="{{ movie.image }}" class="card-img-top mb-3" id="movie-poster" alt="movie poster for {{ movie.title }}">
                           <div class="text-center">
                               <a href="{% url 'movies.show' id=movie.id %}"  class="btn bg-danger text-white">
