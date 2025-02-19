@@ -24,9 +24,9 @@
 .custom-toggler .navbar-toggler-icon {
     background-image: url("../images/list.svg");
 }
-#movie-poster {
+#movie-poster{
     height: 300px;
-    width: auto;
+    width: fit-content;
 }
 #show-movie-poster{
     height: 500px;

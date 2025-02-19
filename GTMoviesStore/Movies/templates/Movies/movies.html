@@ -22,8 +22,8 @@
                 </form>
                 {% for movie in template_data.movies %}
                     <div class="col-md-4 col-lg-3 mb-2">
-                        <div class="pt-4 pb-2 px-2 card w-75 align-items-center">
-                          <img src="{{ movie.image }}" class="card-img-top mb-3" id="movie-poster" alt="movie poster for {{ movie.title }}">
+                        <div class="pt-4 pb-2 px-2 card w-77 align-items-center">
+                          <img src="{{ movie.image }}" class="img-card-200 mb-3" id="movie-poster" alt="movie poster for {{ movie.title }}">
                           <div class="text-center">
                               <a href="{% url 'movies.show' id=movie.id %}"  class="btn bg-danger text-white">
                                 {{ movie.title }}
